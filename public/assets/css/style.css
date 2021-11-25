@@ -34,3 +34,23 @@ h2 {
 h3 {
     font-size: calc(var(--title-size) - 10px);
 }
+
+footer {
+    background-color:var(--secondary-color);
+    height: 200px;
+}
+
+.social{
+    height: 40px;
+}
+
+footer .link {
+    text-decoration: none;
+    font-family: chivo;
+    color:var(--light)
+}
+
+.varius {
+    width: 30px;
+    
+}
