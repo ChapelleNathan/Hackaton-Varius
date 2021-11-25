@@ -1,0 +1,12 @@
+.navbar {
+    background-color: var(--secondary-color);
+}
+
+a > h1 {
+    color: var(--light);
+}
+
+.navbar-icon {
+    width: 35px;
+    height: 35px;
+}
