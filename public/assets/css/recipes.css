@@ -1,0 +1,31 @@
+.card-recipe {
+    height: 500px;
+    border: none;
+    box-shadow: 2px 2px 6px lightgray;
+    border-radius: 8px;
+}
+
+.img-recipe {
+    height: calc(100% * 2 / 3);
+    object-fit: cover;
+}
+
+.btn-play {
+    border-radius: 50%;
+    width: 70px;
+    background-color: var(--secondary-color);
+    aspect-ratio: 1 / 1;
+    border: none;
+}
+.btn-play:hover {
+    background-color: var(--primary-colorgit);
+}
+
+.cont {
+    margin-bottom: 100px;
+}
+
+p{
+    font-weight: bold;
+    font-size: 18px;
+}
