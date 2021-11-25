@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\DeezerManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,6 +23,8 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $deezerManager = new DeezerManager();
+        $player = $deezerManager->oEmbed($deezerManager->searchTrack());
+        return $this->twig->render('Home/index.html.twig', ['player' => $player]);
     }
 }
