@@ -1,0 +1,25 @@
+.picture_food {
+    height: auto;
+    width: auto;
+}
+
+.cooking_in_music h1 {
+    font-size: 750%;
+
+
+}
+
+@media (max-width: 838px) {
+    .cooking_in_music h1 {
+font-size: 500%;    }
+}
+@media (max-width: 550px) {
+    .cooking_in_music h1 {
+        font-size: 350%;
+    }
+@media (max-width: 353px) {
+    .cooking_in_music {
+        width: clamp(250px, 5em, 70px);
+    }
+}
+}
