@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+:root {
+    --primary-color: #1C1B22;
+    --secondary-color: #FF6F61;
+    --light: #F5F5F5;
+    --p-size: 20px;
+    --title-size: 40px;
+}
+
+body {
+    background-color: var(--light);
+}
+
+h1, h2, h3 {
+    font-family: 'Handlee', cursive;
+    color: var(--secondary-color);
+}
+
+p {
+    font-family: 'Chivo', sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: var(--title-size);
+}
+
+h2 {
+    font-size: calc(var(--title-size) - 5px);
+}
+
+h3 {
+    font-size: calc(var(--title-size) - 10px);
+}
