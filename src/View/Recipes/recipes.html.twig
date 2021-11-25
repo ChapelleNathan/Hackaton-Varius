@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	{% for recipe in recipes %}
+    <img src="{{recipe.image}}" alt="image-recette">
+    {% endfor %}
+{% endblock %}
