@@ -27,11 +27,4 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/index.html.twig');
     }
-
-    public function userPlaylist(int $id): string
-    {
-        $userManager = new UserManager();
-        $userPlaylist = $userManager->selectUserPlaylist($id);
-        return $this->twig->render('Home/playlist.html.twig', ['userPlaylist' => $userPlaylist]);
-    }
 }
