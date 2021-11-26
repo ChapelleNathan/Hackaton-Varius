@@ -10,5 +10,6 @@
 return [
     '' => ['HomeController', 'index',],
     'recipes' => ['RecipeController', 'show'],
-    'recipes/show' => ['RecipeController', 'showOneRecipe',['id']]
+    'recipes/show' => ['RecipeController', 'showOneRecipe',['id']],
+    'timer' => ['TimerController', 'show', ['id']]
 ];
