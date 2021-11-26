@@ -14,6 +14,6 @@ class TimerController extends AbstractController
         $timerManager = new RecipeManager();
         $timer = $timerManager->oneRecipe($id);
 
-        return $this->twig->render('Timer/_timer.html.twig', ['timer' => $timer]);
+        return $this->twig->render('timer/timer.html.twig', ['timer' => $timer]);
     }
 }
