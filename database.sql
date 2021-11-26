@@ -60,7 +60,7 @@ CREATE TABLE `user` (
 --
 
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Chapelle','Nathan',1,NULL);
+INSERT INTO `user` VALUES (1,'John','Doe',1,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
