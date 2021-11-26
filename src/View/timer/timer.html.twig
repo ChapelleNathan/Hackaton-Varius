@@ -1,6 +1,12 @@
 {% extends "layout.html.twig" %}
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/recipes.css">
+<link rel="stylesheet" href="/assets/css/timer.css">{% endblock %}
 {% block content %}
-	<div id="timer">{{ timer.cooking_time }}</div>
+	<h1 class="text-center m-5">{{recipe.name}}</h1>
+	<div class="row g-5 cont large-container">
+			{% include "timer/_large_card.html.twig" %}		
+	</div>
 {% endblock %}
 {% block javascript %}
 	<script src="/assets/js/timer.js"></script>

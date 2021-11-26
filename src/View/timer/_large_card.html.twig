@@ -1,0 +1,13 @@
+<div class="col-lg-12 column">
+	<div class="card card-recipe large-card mx-3">
+	
+		<img src="{{ timer.image }}" class="card-img img-recipe" alt="not">
+		<div class="card-body d-flex flex-column justify-content-center align-items-center pb-5">
+		<h2 class="mt-5">Cuisson</h2>
+			<p class="card-secondary-title time m-3" id="timer">{{ timer.cooking_time }}
+				</p>		
+            <a href="recipes/show?id={{timer.id}}" class="btn btn-circle btn-play mt-3 d-flex align-items-center justify-content-center" id="button"><img src="/assets/images/return.svg" alt="play" class="ps-1"></a>
+         
+		</div>
+	</div>
+</div>

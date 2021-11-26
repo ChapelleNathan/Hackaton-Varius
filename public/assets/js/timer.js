@@ -2,7 +2,7 @@ const departMinutes = document.getElementById("timer").innerHTML;
 let temps = departMinutes * 60;
 
 const timerElement = document.getElementById("timer");
-timerElement.innerHTML = 'coucou';
+
 setInterval(() => {
   let minutes = parseInt(temps / 60, 10);
   let secondes = parseInt(temps % 60, 10);

@@ -26,7 +26,7 @@ h1 {
     border: none;
 }
 .btn-play:hover {
-    background-color: var(--primary-colorgit);
+    background-color: var(--primary-color);
 }
 
 .cont {

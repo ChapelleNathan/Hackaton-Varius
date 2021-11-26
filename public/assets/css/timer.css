@@ -1,3 +1,11 @@
-.container{
-    
+.time {
+    font-size: var(--main-title);
+}
+
+h2, .return {
+    font-size: var(--title-size);
+}
+
+.return {    
+    font-size: 18px;
 }
