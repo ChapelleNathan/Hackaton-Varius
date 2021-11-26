@@ -9,3 +9,19 @@ h2, .return {
 .return {    
     font-size: 18px;
 }
+
+#button {
+    background-color: var(--primary-color);
+    height: 80px;
+    width: 80px;
+}
+
+#player-button{
+    height:80px;
+    aspect-ratio: 1 / 1;
+    border:none;
+}
+
+.div-player {
+    width: 100%;
+}

@@ -1,15 +1,20 @@
-const departMinutes = document.getElementById("timer").innerHTML;
-let temps = departMinutes * 60;
+var playerButton = document.getElementById('button');
 
-const timerElement = document.getElementById("timer");
+playerButton.onclick = function () {
 
-setInterval(() => {
-  let minutes = parseInt(temps / 60, 10);
-  let secondes = parseInt(temps % 60, 10);
+  const departMinutes = document.getElementById("timer").innerHTML;
+  let temps = departMinutes * 60;
 
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  secondes = secondes < 10 ? "0" + secondes : secondes;
+  const timerElement = document.getElementById("timer");
 
-  timerElement.innerText = `${minutes}:${secondes}`;
-  temps = temps <= 0 ? 0 : temps - 1;
-}, 1000);
+  setInterval(() => {
+    let minutes = parseInt(temps / 60, 10);
+    let secondes = parseInt(temps % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    secondes = secondes < 10 ? "0" + secondes : secondes;
+
+    timerElement.innerText = `${minutes}:${secondes}`;
+    temps = temps <= 0 ? 0 : temps - 1;
+  }, 1000);
+}
