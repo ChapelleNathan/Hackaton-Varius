@@ -17,6 +17,7 @@ use Symfony\Component\HttpClient\HttpClient;
  */
 class RecipeManager
 {
+    public const FAV = 'fav_recipe';
     public function allRecipes(): array
     {
         $client = HttpClient::create();
@@ -31,5 +32,19 @@ class RecipeManager
         $response = $client->request('GET', 'https://stark-temple-22847.herokuapp.com/recipes/' . $id);
         $content = $response->toArray();
         return $content;
+    }
+
+    public function allFav($favRecipes): array
+    {
+        $client = HttpClient::create();
+        $response = $client->request('GET', 'https://stark-temple-22847.herokuapp.com/recipes');
+        $recipes = $response->toArray();
+        $favs = [];
+        foreach ($recipes as $recipe) {
+            if (in_array($recipe['id'], $favRecipes)) {
+                $favs[] = $recipe;
+            }
+        }
+        return $favs;
     }
 }
