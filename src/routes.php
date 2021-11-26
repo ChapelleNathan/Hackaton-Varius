@@ -12,5 +12,6 @@ return [
     'profile' => ['UserController', 'details',['id']],
     'recipes' => ['RecipeController', 'show'],
     'recipes/show' => ['RecipeController', 'showOneRecipe',['id']],
-    'timer' => ['TimerController', 'show', ['id']]
+    'timer' => ['TimerController', 'show', ['id']],
+    'deezer' => ['UserController', 'show', ['id']],
 ];
