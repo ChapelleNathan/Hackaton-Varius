@@ -5,21 +5,29 @@
 
 .cooking_in_music h1 {
     font-size: 750%;
+}
 
-
+.button {
+    height: 75px;
+    width: 75px;
+    display: inline;
+    align-items: center;
 }
 
 @media (max-width: 838px) {
     .cooking_in_music h1 {
-font-size: 500%;    }
+        font-size: 500%;
+    }
 }
+
 @media (max-width: 550px) {
     .cooking_in_music h1 {
         font-size: 350%;
     }
-@media (max-width: 353px) {
-    .cooking_in_music {
-        width: clamp(250px, 5em, 70px);
+
+    @media (max-width: 353px) {
+        .cooking_in_music {
+            width: clamp(250px, 5em, 70px);
+        }
     }
-}
 }
