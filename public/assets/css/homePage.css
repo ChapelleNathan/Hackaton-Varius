@@ -23,6 +23,16 @@ p {
     font-style: normal;
 }
 
-.cooking h2 {
+.cooking h3 {
     font-size: var(--title-size);
+}
+
+.variushome {
+    font-size: 100px;
+    font-family: 'La Belle Aurore';
+    text-align: center;
+}
+
+.music {
+    height: 60px;
 }

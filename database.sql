@@ -73,3 +73,37 @@ INSERT INTO `user` VALUES (1,'Chapelle','Nathan',1,NULL);
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-11-26  9:25:37
+
+--
+-- Table structure for table `fav_recipe`
+--
+
+DROP TABLE IF EXISTS `fav_recipe`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fav_recipe` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+  `recipe_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `recipe_id` (`recipe_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fav_recipe`
+--
+
+/*!40000 ALTER TABLE `fav_recipe` DISABLE KEYS */;
+INSERT INTO `fav_recipe` VALUES (7,1),(8,5),(9,9);
+/*!40000 ALTER TABLE `fav_recipe` ENABLE KEYS */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-11-26 12:15:34

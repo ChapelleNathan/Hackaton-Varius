@@ -1,13 +1,22 @@
 <div class="col-lg-12 column">
 	<div class="card card-recipe large-card mx-3">
-	
+
 		<img src="{{ timer.image }}" class="card-img img-recipe" alt="not">
 		<div class="card-body d-flex flex-column justify-content-center align-items-center pb-5">
-		<h2 class="mt-5">Cuisson</h2>
-			<p class="card-secondary-title time m-3" id="timer">{{ timer.cooking_time }}
-				</p>		
-            <a href="recipes/show?id={{timer.id}}" class="btn btn-circle btn-play mt-3 d-flex align-items-center justify-content-center" id="button"><img src="/assets/images/return.svg" alt="play" class="ps-1"></a>
-         
+			<h2 class="mt-5">Cuisson</h2>
+			<p class="card-secondary-title time m-3" id="timer">1
+			</p>
+			<div class="div-player d-flex flex-row justify-content-center align-items-center gap-4">
+				<a href="#" class="btn btn-circle btn-play d-flex align-items-center justify-content-center" id="button"><img src="/assets/images/return.svg" alt="play" class="ps-1"></a>
+
+				<div id="player"></div>
+				<input type="hidden" value="{{ trackid }}" id="id">
+				<button class="btn btn-danger rounded-circle " id="player-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-play-fill ps-1" viewbox="0 0 16 16">
+						<path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
