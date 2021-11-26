@@ -92,3 +92,14 @@ h1 {
     font-size: var(--main-title);
     font-family: handlee;
 }
+
+#player-button{
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+#timer {
+    font-size: var(--title-size);
+}
