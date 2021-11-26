@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Model\RecipeManager;
 use App\Model\DeezerManager;
 use App\Model\UserManager;
+use App\Model\FavRecipeManager;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
@@ -15,8 +16,12 @@ class RecipeController extends AbstractController
     {
         $recipeManager = new RecipeManager();
         $recipes = $recipeManager->allRecipes();
-
-        return $this->twig->render('Recipes/recipes.html.twig', ['recipes' => $recipes]);
+        $favRecipeManager = new FavRecipeManager();
+        $favRecipes = $favRecipeManager->selectAll();
+        return $this->twig->render('Recipes/recipes.html.twig', [
+            'recipes' => $recipes,
+            'favRecipes' => array_column($favRecipes, 'recipe_id')
+        ]);
     }
 
     public function showOneRecipe(int $id): string
@@ -35,5 +40,38 @@ class RecipeController extends AbstractController
             'ingredients' => $ingredients,
             'playlistId' => $playlistId['id']
         ]);
+    }
+
+    public function addFav(): void
+    {
+        $favRecipeManager = new FavRecipeManager();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = array_map('trim', $_POST);
+            $favRecipeManager->add((int)$data['recipe_id']);
+            header('Location: /recipes');
+        }
+    }
+
+    public function remove(): void
+    {
+        $favRecipeManager = new FavRecipeManager();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = array_map('trim', $_POST);
+            $favRecipeManager->delete((int)$data['recipe_id']);
+            header('Location: /recipes');
+        }
+    }
+
+    public function showFav(): string
+    {
+        $recipeManager = new RecipeManager();
+        $favRecipeManager = new FavRecipeManager();
+        $allFavs = $favRecipeManager->selectRecipe();
+        $favs = [];
+        foreach ($allFavs as $fav) {
+            $favs[] = $fav['recipe_id'];
+        }
+        $favRecipes = $recipeManager->allFav($favs);
+        return $this->twig->render('Recipes/recipes.html.twig', ['recipes' => $favRecipes]);
     }
 }

@@ -18,13 +18,35 @@ h1 {
     object-fit: cover;
 }
 
+.play-recipe {
+    fill: var(--light);
+    width: 30px;
+    height: 30px;
+}
+
+.heart-icone {
+    fill: var(--secondary-color);
+}
+
+.btn-like {
+    width: 50px;
+    height: 50px;
+    border-color: var(--secondary-color);
+}
+
+.btn-like:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
 .btn-play {
     border-radius: 50%;
-    width: 70px;
+    width: 50px;
     background-color: var(--secondary-color);
     aspect-ratio: 1 / 1;
     border: none;
 }
+
 .btn-play:hover {
     background-color: var(--primary-color);
 }
