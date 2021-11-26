@@ -1,0 +1,28 @@
+.cooking_in_music_pic {
+    height: 500px;
+}
+
+.banner {
+    height: 100%;
+    object-fit: cover;
+}
+
+.cooking_in_music h1 {
+    font-size: clamp(80px, 15vw, 120px);
+}
+
+.button {
+    height: 75px;
+    width: 75px;
+    display: inline;
+    align-items: center;
+}
+
+p {
+    font-size: var(--p-size);
+    font-style: normal;
+}
+
+.cooking h2 {
+    font-size: var(--title-size);
+}

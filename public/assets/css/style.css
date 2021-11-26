@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 :root {
     --primary-color: #1C1B22;
@@ -6,6 +6,7 @@
     --light: #F5F5F5;
     --p-size: 20px;
     --title-size: 40px;
+    --main-title:60px;
 }
 
 body {
@@ -32,4 +33,24 @@ h2 {
 
 h3 {
     font-size: calc(var(--title-size) - 10px);
+}
+
+footer {
+    background-color:var(--secondary-color);
+    height: 200px;
+}
+
+.social{
+    height: 40px;
+}
+
+footer .link {
+    text-decoration: none;
+    font-family: chivo;
+    color:var(--light)
+}
+
+.varius {
+    width: 30px;
+    
 }

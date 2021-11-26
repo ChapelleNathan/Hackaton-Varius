@@ -1,0 +1,51 @@
+<div class="col-sm-6 col-lg-4 column">
+	<div class="card card-recipe mx-3 mb-4 text-center">
+		<img src="{{ recipe.image }}" class="card-img img-recipe" alt="not">
+		<div class="card-body align-items-center pb-4">
+			<div class="row text-center">
+				<h3 class="card-title mt-2">{{ recipe.name }}</h3>
+			</div>
+			<div class="row text-center">
+				<p class="card-secondary-title">{{recipe.cooking_time}}
+					min</p>
+			</div>
+			<div class="row d-flex justify-content-between">
+				<div class="col-3">
+					<a href="/recipes/show?id={{ recipe.id }}"
+						class="btn btn-circle btn-play mt-3 d-flex align-items-center justify-content-center"><svg
+							xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-play-fill play-recipe" viewBox="0 0 16 16">
+							<path
+								d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+						</svg></a>
+				</div>
+				<div class="col-3">
+					{% if recipe.id in favRecipes %}
+					<form action="recipes/nofav" method="POST">
+						<input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+						<button class="btn btn-danger mt-3 rounded-circle btn-like">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-heart-fill cross-icon" viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+							</svg>
+						</button>
+					</form>
+					{% else %}
+					<form action="/recipes/fav" method="POST">
+						<input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+						<button class="btn btn-outline-danger mt-3 rounded-circle btn-like">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-heart-fill heart-icone" viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+							</svg>
+						</button>
+					</form>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

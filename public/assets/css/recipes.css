@@ -1,0 +1,94 @@
+.card-recipe {
+    height: 500px;
+    border: none;
+    box-shadow: 2px 2px 6px lightgray;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.card-recipe h2 {
+    font-size: var(--title-size);
+}
+
+.img-recipe {
+    height: calc(100% * 2 / 3);
+    object-fit: cover;
+}
+
+.play-recipe {
+    fill: var(--light);
+    width: 30px;
+    height: 30px;
+}
+
+.heart-icone {
+    fill: var(--secondary-color);
+}
+
+.btn-like {
+    width: 50px;
+    height: 50px;
+    border-color: var(--secondary-color);
+}
+
+.btn-like:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-play {
+    border-radius: 50%;
+    width: 50px;
+    background-color: var(--secondary-color);
+    aspect-ratio: 1 / 1;
+    border: none;
+}
+
+.btn-play:hover {
+    background-color: var(--primary-color);
+}
+
+.cont {
+    margin-bottom: 100px;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.time {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.large-card {
+    height: auto;
+}
+
+.large-card img {
+    max-height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.large-card li {
+    list-style-type: none;
+}
+
+.large-card ul {
+    line-height: 35px;
+    font-size: var(--p-size);
+    font-style: italic;
+}
+
+.description {
+    font-size: var(--p-size);
+    line-height: 35px;
+    text-indent: 10%;
+}
+
+.play {
+    font-size: var(--main-title);
+    font-family: handlee;
+}

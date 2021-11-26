@@ -1,0 +1,28 @@
+.username {
+    font-size: calc( var(--title-size) - 8px );
+}
+
+.radio-style {
+    background-color: var(--primary-color);
+    color: var(--light);
+    height: 60px;
+    border: none;
+}
+
+.radio-style:focus {
+    background-color: var(--primary-color);
+}
+
+.card {
+    width: 21rem;
+}
+
+#validate {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+#validate:hover {
+    color: var(--light);
+    background-color: var(--secondary-color);
+}
