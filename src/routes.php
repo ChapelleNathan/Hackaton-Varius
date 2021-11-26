@@ -9,7 +9,7 @@
 
 return [
     '' => ['HomeController', 'index',],
-    'profile' => ['UserController', 'details',['id']]
+    'profile' => ['UserController', 'details',['id']],
     'recipes' => ['RecipeController', 'show'],
-    'recipes/show' => ['RecipeController', 'showOneRecipe',['id']]
+    'recipes/show' => ['RecipeController', 'showOneRecipe',['id']],
 ];
