@@ -1,10 +1,14 @@
-.picture_food {
-    height: auto;
-    width: auto;
+.cooking_in_music_pic {
+    height: 500px;
+}
+
+.banner {
+    height: 100%;
+    object-fit: cover;
 }
 
 .cooking_in_music h1 {
-    font-size: 750%;
+    font-size:clamp(80px, 15vw, 120px);
 }
 
 .button {
@@ -14,20 +18,11 @@
     align-items: center;
 }
 
-@media (max-width: 838px) {
-    .cooking_in_music h1 {
-        font-size: 500%;
-    }
+p {
+    font-size: var(--p-size);
+    font-style: normal;
 }
 
-@media (max-width: 550px) {
-    .cooking_in_music h1 {
-        font-size: 350%;
-    }
-
-    @media (max-width: 353px) {
-        .cooking_in_music {
-            width: clamp(250px, 5em, 70px);
-        }
-    }
+.cooking h2 {
+    font-size: var(--title-size);
 }
