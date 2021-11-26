@@ -11,7 +11,10 @@ return [
     'home' => ['HomeController', 'index',],
     'profile' => ['UserController', 'details',['id']],
     'recipes' => ['RecipeController', 'show'],
+    'recipes/fav' => ['RecipeController', 'addFav'],
+    'recipes/nofav' => ['RecipeController', 'remove'],
     'recipes/show' => ['RecipeController', 'showOneRecipe',['id']],
+    'recipes/favories' => ['RecipeController', 'showFav'],
     'timer' => ['TimerController', 'show', ['id']],
     'deezer' => ['UserController', 'show', ['id']],
 ];
