@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\DeezerManager;
 use App\Model\PlaylistManager;
 use App\Model\UserManager;
 
@@ -33,5 +34,14 @@ class UserController extends AbstractController
         }
 
         return $errors;
+    }
+
+    public function show(): string
+    {
+        $deezerManager = new DeezerManager();
+        $userManager = new UserManager();
+        $user = $userManager->selectUserPlaylist($_GET['id']);
+        $playlist = $deezerManager->searchPlaylist($user);
+        return $this->twig->render('deezer/deezer.html.twig', ['id' => $playlist['id']]);
     }
 }
