@@ -12,5 +12,9 @@ a > h1 {
 }
 
 .varius-logo {
-    width: 115px;
+    width: 130px;
+}
+
+.nav-link {
+    font-size: var(--p-size);
 }
