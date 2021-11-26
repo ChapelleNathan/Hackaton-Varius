@@ -24,4 +24,12 @@ class RecipeManager
         $content = $response->toArray();
         return $content;
     }
+
+    public function oneRecipe(int $id): array
+    {
+        $client = HttpClient::create();
+        $response = $client->request('GET', 'https://stark-temple-22847.herokuapp.com/recipes/' . $id);
+        $content = $response->toArray();
+        return $content;
+    }
 }
